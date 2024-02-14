@@ -97,7 +97,7 @@ const drawSnake = () => {
     })
 }
 
-let time = 100;
+let time = 150;
 
 const moveSnake = () => {
     const head = snake[snake.length - 1]
@@ -227,7 +227,7 @@ let runClicked = false
 
 document.getElementById('run').onclick = () => {
     setTimeout(() => {
-        time = 100
+        time = 150
     }, 1000)
 
     time = 40
@@ -251,7 +251,7 @@ document.addEventListener("keydown", ({key}) => {
 
 document.addEventListener("keyup", ({key}) => {
     if (key == 'Shift') {
-        time = 100
+        time = 150
     }
 })
 
