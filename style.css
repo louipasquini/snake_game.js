@@ -20,6 +20,8 @@ body {
 }
 
 canvas {
+    width: 600;
+    height: 600;
     background-color: black;
     justify-self: center;
     align-self: center;
