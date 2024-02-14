@@ -31,7 +31,7 @@ button {
     height: 80px;
     border: none;
     outline: none;
-    border-radius: 30px;
+    border-radius: 40px;
     font-weight: 800;
 }
 
@@ -43,7 +43,7 @@ button {
     display: flex;
 }
 
-.inferio button {
+.inferior button {
     padding-left: 6px;
     padding-right: 6px;
 }
@@ -66,5 +66,10 @@ button {
     .control {
         position: relative;
         visibility: visible;
+    }
+
+    canvas {
+        width: 400;
+        height: 400;
     }
   }
