@@ -20,8 +20,6 @@ body {
 }
 
 canvas {
-    width: 600;
-    height: 600;
     background-color: black;
     justify-self: center;
     align-self: center;
@@ -68,10 +66,5 @@ button {
     .control {
         position: relative;
         visibility: visible;
-    }
-
-    canvas {
-        width: 400;
-        height: 400;
     }
   }
