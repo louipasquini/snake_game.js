@@ -36,8 +36,8 @@ const snakePointZero = [
 ]
 
 const food = {
-    x: Math.floor(Math.random() * 40) * 10,
-    y: Math.floor(Math.random() * 40) * 10,
+    x: Math.floor(Math.random() * 39) * 10,
+    y: Math.floor(Math.random() * 39) * 10,
     color: 'white',
     blur: 6,
     glow: 'shine'
@@ -64,11 +64,11 @@ const drawFood = () => {
 }
 
 const defineFoodPosition = () => {
-    let newX = Math.floor(Math.random() * 40) * 10
-    let newY = Math.floor(Math.random() * 40) * 10 
+    let newX = Math.floor(Math.random() * 39) * 10
+    let newY = Math.floor(Math.random() * 39) * 10 
     while (snake.find((position) => position.x == newX && position.y == newY)) {
-        newX = Math.floor(Math.random() * 40) * 10
-        newY = Math.floor(Math.random() * 40) * 10 
+        newX = Math.floor(Math.random() * 39) * 10
+        newY = Math.floor(Math.random() * 39) * 10 
     }
     food.x = newX
     food.y = newY
@@ -103,7 +103,7 @@ const moveSnake = () => {
     const head = snake[snake.length - 1]
 
     if (direction == "right") {
-        if (head.x >= 390) {
+        if (head.x >= 380) {
             snake.push({ x: 0, y: head.y})
         } else {
             snake.push({ x: head.x + size, y: head.y})
@@ -113,7 +113,7 @@ const moveSnake = () => {
 
     if (direction == "up") {
         if (head.y <= 0) {
-            snake.push({ x: head.x, y: 390})
+            snake.push({ x: head.x, y: 380})
         } else {
             snake.push({ x: head.x , y: head.y - size})
         }
@@ -121,7 +121,7 @@ const moveSnake = () => {
     }
 
     if (direction == "down") {
-        if (head.y >= 390) {
+        if (head.y >= 380) {
             snake.push({ x: head.x, y: 0})
         } else {
             snake.push({ x: head.x , y: head.y + size})
@@ -131,7 +131,7 @@ const moveSnake = () => {
 
     if (direction == "left") {
         if (head.x <= 0) {
-            snake.push({ x: 390, y: head.y})
+            snake.push({ x: 380, y: head.y})
         } else {
             snake.push({ x: head.x - size, y: head.y})
         }
@@ -146,11 +146,11 @@ const drawGrid = () => {
     for (let i = 10; i < canvas.width; i += 10) {
         ctx.beginPath()
         ctx.lineTo(i,0)
-        ctx.lineTo(i,400)
+        ctx.lineTo(i,390)
         ctx.stroke()
         ctx.beginPath()
         ctx.lineTo(0,i)
-        ctx.lineTo(400,i)
+        ctx.lineTo(390,i)
         ctx.stroke()
     }
     
@@ -179,7 +179,7 @@ const gameLoop = () => {
         }
     }
 
-    ctx.clearRect(0,0,400,400)
+    ctx.clearRect(0,0,390,390)
     drawGrid()
     drawFood()
     drawSnake()
