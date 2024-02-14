@@ -23,7 +23,7 @@ canvas {
     background-color: black;
     justify-self: center;
     align-self: center;
-    box-shadow: 0 0 80px rgba(255, 255, 255, 0.137);
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0.555);
 }
 
 button {
@@ -71,5 +71,9 @@ button {
     .control {
         position: relative;
         visibility: visible;
+    }
+
+    button:hover {
+        background-color: aliceblue;
     }
   }
