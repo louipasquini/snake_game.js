@@ -27,8 +27,8 @@ canvas {
 }
 
 button {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -44,8 +44,8 @@ button {
 }
 
 .inferior button {
-    padding-left: 6px;
-    padding-right: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .directions {
@@ -60,6 +60,10 @@ button {
     align-items: center;
     position: absolute;
     visibility: hidden;
+}
+
+.run {
+    margin-left: 12px;
 }
 
 @media screen and (orientation: portrait) {
